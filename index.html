@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Showcase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>An Interactive Web Showcase</h1>
+  <p>Click, hover, type... and explore!</p>
+</header>
+
+<main>
+
+  <!-- 1. Event Handling -->
+  <section>
+    <h2>1. Event Handling 🎈</h2>
+    <button id="eventBtn">Click Me</button>
+    <div id="secretZone" style="padding:1rem; border:1px dashed #6200ea; margin-top:1rem; cursor:pointer;">
+       Double-click or long press here
+    </div>
+  </section>
+
+  <!-- 2. Interactive Elements -->
+  <section>
+    <h2>2. Interactive Elements 🎮</h2>
+
+    <button onclick="changeMe(this)">Change Me</button>
+
+    <div style="margin-top: 1rem;">
+      <img id="gallery" src="https://via.placeholder.com/300x200/6200ea/ffffff?text=Image+1" alt="Gallery">
+      <button onclick="nextImage()">Next Image</button>
+    </div>
+
+    <div style="margin-top: 1rem;">
+      <button onclick="showTab('tab1')">Tab 1</button>
+      <button onclick="showTab('tab2')">Tab 2</button>
+
+      <div id="tab1" class="tab">This is Tab 1 Content</div>
+      <div id="tab2" class="tab">This is Tab 2 Content</div>
+    </div>
+
+    <button onclick="this.classList.add('animated-button')">Animate Me ✨</button>
+  </section>
+
+  <!-- 3. Form Validation -->
+  <section>
+    <h2>3. Form Validation 📋✅</h2>
+    <form id="signupForm">
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="password" id="password" placeholder="Enter password" required>
+      <button type="submit">Sign Up</button>
+      <p id="feedback"></p>
+    </form>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
